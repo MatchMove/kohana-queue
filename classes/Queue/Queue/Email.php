@@ -13,6 +13,11 @@ abstract class Queue_Queue_Email {
     
     public function push($recipient, $subject, $body, $config = null)
     {
-        return $this->_push($recipient, $subject, $body, !empty($config) ?$config: $this->config['default'] );
+        return $this->_push($recipient, $subject, $body, !empty($config) ?$config: $this->config['default']);
+    }
+    
+    public function shift()
+    {
+        return $this->_shift();
     }
 }
